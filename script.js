@@ -3,7 +3,7 @@ let request = new XMLHttpRequest();
 request.open('GET', 'https://swapi.dev/api/films/');
 request.send();
 request.onload = function () {
-    // let allTitles = [];
+    let allTitles = [];
     if (request.status == 200) {
         let data = JSON.parse(request.responseText)
         let titleOne = data.results[0].title;
@@ -30,21 +30,7 @@ request.onload = function () {
 
         let movieSix = document.getElementById('textSix');
         movieSix.innerHTML = (titleSix);
-
-        // console.log(data.results[0].title)
-        // for (i = 0; i < data.results.length; i++) {
-        //     let titles = data.results[i].title;
-        //     allTitles += titles;
-        //     console.log(titles);
-
-        //     // let newSpan = document.createElement("span");
-        //     // let z = newSpan.appendChild(allTitles);
-        //     // // console.log('allTitles: ', allTitles)
-        //     // // console.log('titles: ', titles)
-        //     // // return titles;
-        //     // let x = document.getElementById('movie_container');
-        //     // x.innerHTML = "<span>" + titles + "</span>";
-        // }
+        
     } else {
         console.log('error')
     }

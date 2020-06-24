@@ -65,6 +65,10 @@ label {
     margin-right: 2%;
 }
 
+.checkbox {
+    margin-right: 2%;
+}
+
 input[type='checkbox'] {
     height: 10px;
     width: 10px;
@@ -103,7 +107,7 @@ input:checked[type='checkbox']:after {
     background-color: red;
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 1000px) { 
     #titleBar {
         font-size: x-large;
     }
