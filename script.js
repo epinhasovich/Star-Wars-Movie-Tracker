@@ -3,7 +3,6 @@ let request = new XMLHttpRequest();
 request.open('GET', 'https://swapi.dev/api/films/');
 request.send();
 request.onload = function () {
-    let allTitles = [];
     if (request.status == 200) {
         let data = JSON.parse(request.responseText)
         let titleOne = data.results[0].title;
@@ -30,7 +29,7 @@ request.onload = function () {
 
         let movieSix = document.getElementById('textSix');
         movieSix.innerHTML = (titleSix);
-        
+
     } else {
         console.log('error')
     }
